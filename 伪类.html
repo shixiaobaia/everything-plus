@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		.a{
+			font-size: 24px;
+			color: black;
+		}
+		/*鼠标没有点击过*/
+		.a:link{
+				font-size: 24px;
+				color:blue;
+				text-decoration: none;
+			}
+			/*<!--鼠标点击并松开,已经访问过-->*/
+		.a:visited{
+			font-size: 24px;
+				color: red;
+				text-decoration:none;
+		}
+		/*<!--鼠标经过-->*/
+		.a:hover{
+			font-size: 24px;
+				color:forestgreen;
+				text-decoration: none;
+		}
+		/*<!--激活状态,鼠标点击但没松开,字变大-->*/
+		.a:active{
+			font-size: 34px;
+				color:fuchsia;
+				text-decoration: none;
+		}
+			
+		</style>
+	</head>
+	<body>
+		<a href="#" class="a">学生管理</a>
+		<a href="#" class="a">教师管理</a>
+	</body>
+</html>
