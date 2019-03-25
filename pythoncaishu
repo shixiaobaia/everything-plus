@@ -1,0 +1,14 @@
+import random
+number=random.randint(1,9)
+guess=-1
+print("数字猜谜游戏")
+while guess!=number:
+    guess=int(input("请输入你的数字：输入0退出"))
+    if guess==0:
+        break
+    if guess==number:
+        print("恭喜，你猜对了")
+    elif guess>=number:
+        print("猜大了")
+    elif guess<=number:
+        print("猜小了")
