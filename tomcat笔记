@@ -1,0 +1,53 @@
+web应用服务器tomcat
+浏览器端只要安装特定的软件即可
+websphere:IBM公司，收费，支持javaEE规范
+weblogin:BAE公司收费的，
+IIS微软，收费和net语言兼容性好，
+tomcat免费的
+不完全支持javaee规范，EJB不支持的，servlet,jsp,javamail,支持
+中小型公司用的多
+tomcat：容器
+可以apache公司产品，容器共享数据
+html,jsp,css,js，图片都可以共享
+放入一个目录进行间接访问,WEB目录
+WEB-INF---规定的目录
+         class---目录   java原码文件
+         lib-----第三方jar包
+               javax.servlet-api.jar
+                Dom4j.jar
+将网站----》文件夹
+安装版：不建议后缀,exe    .mis，建议压缩版.zip
+
+Tomcat启动的方式
+安装目录bin目录
+startup.bat启动tomcat
+shutdown.bat结束tomcat
+静态资源：当页面源码没有发生变化，html,css,js静态东西，显示当前时间
+动态资源：页面的源代码可能在发生变化
+servlet
+是一个服务器应用程序，javaweb开发就是开发服务器应用程序,用于交互式的浏览和生成数据
+借助于容器（tomcat）运行
+访问tomcat
+http//localhost:8080
+http//localhost:8080/bbs/hello.html
+http://一种协议，请求对象和相应对象规定的一种交互格式
+localhost本地域名
+                   顶级域名 com/cn
+                    二级域名baudu.com
+                   三级域名www.baidu.com
+8080：tomcat默认端口号--------》JVM   bindException  端口号被占用
+mysql:3306
+hbuilder:8020
+级域软件：8080
+端口号：0-65535有效端口号   0-1024保留端口号使用
+bbs:当前tomcat安装目录webapps的项目名称
+tomcat安装目录的文件说明
+注意事项
+tomcat   bin目录中的startup.bat执行参数
+如果path的环境变量如果是普通方式，闪屏，启动失败，因为catelina,:需要在path中找一个系统变量，找：JAVA_HOME
+
+
+
+如何手动写一个servlet
+什么是servlet,它的生命周期
+http协议
