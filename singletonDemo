@@ -1,0 +1,22 @@
+/懒汉式单例,存在线程安全问题，当有两个以上线程同时进去，都为空,解决办法，加synchronized,保证对象只有一个，但未解决，volitale保证，拿到的一定是完全初始化好的对象
+/**class Singleton{
+ * //扩展private String str;
+ *  private static  volitale Singleton singleton;//拿到的一定是完全初始化好的对象
+ *  private Singleton(){
+ *      //str="hello";
+ *  }
+ *  public String getStr(){
+ *      return  str;
+ *  }}
+ *  public static Singleton  getInstance(){
+ *  if(singleton==null){//single checked,第一次检查
+ *       synchronized(singleton.class){
+ *       if（singleton==null）{//第二次检查，防止多个线程同时进入，双重检查
+ *        singleton=new Singleton();
+ *        }
+ *     }
+ *     return singleton;
+ }*/
+
+public class SingletonDemo {
+}
