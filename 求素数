@@ -1,3 +1,5 @@
+
+//用开根号的方法求素数
 import static java.lang.Math.sqrt;
 
 public class sushu {
