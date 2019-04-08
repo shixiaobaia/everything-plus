@@ -1,0 +1,12 @@
+public classQuick{
+public static void sort(Comparable[] a){
+  StdRandom.shuffle(a);//消除对输入的依赖
+  sort(a,0,a.length-1);
+  }
+  private static void sort(Coparable[] a,int low ,int hi){
+  if (hi<=low) return;
+  int j=partition(a,low,hi);//切分
+  sort(a,low,j-1);//将左半部分排序
+  sort(a,j+1,hi);//将右半部分排序
+  }
+}
