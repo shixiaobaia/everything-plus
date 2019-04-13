@@ -1,0 +1,36 @@
+#include<stdio.h>
+int issushu(int a){
+int x=a;
+for(int j=2;j<x;j++){
+  if(x/j==0)
+  return  0;
+}
+   
+ 
+ return 1;
+  
+  
+}
+int ishuiwen(int a){
+  int h=a;
+ 
+    int e=h%10;
+    int z=(h/10)%10;
+   int  k=h/100;
+    
+    if(e==k){
+    return 1;
+    }
+}
+int main(){
+int l=0;
+int r=0;
+int count=0;
+scanf("%d%d",&l,&r);
+for(int i=l;i<=r;i++){
+if(issushu(i)&&ishuiwen(i)){
+count++;
+}
+printf("%d",count);
+}
+}
