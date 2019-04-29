@@ -1,0 +1,80 @@
+多线程：
+进程与线程的概念
+创建线程的三种方法，关于多线程
+yield方法，sleep方法区别，都不释放对象锁，区别：
+join 方法 释放对象锁
+多线程同步：
+什么是多线程同步，举例卖票，（一票多卖）
+内建锁
+lock
+CAS加volatile
+内建锁synchronized
+   --使用方式
+       -同步代码块
+	      -锁对象：Monitor
+		  
+	   -同步方法
+   --底层实现：对象Monitor机制
+	-JDK6之后的优化：
+	自旋锁，自适应自旋
+	无锁-》偏向锁-》轻量级锁-》重量级锁
+	-wait(),notify(),必须在同步代码块或同步方法中使用
+	      -同步队列
+		  -等待队列
+Lock体系
+   -使用方式
+      -lock,unlock操作
+   -底层实现：
+      -AQS：同步器
+	  
+   -常用子类
+      -ReentLock
+	  -ReentReadWriterLock：读写锁
+    -Condition的等待与唤醒机制
+内建锁	  ReentrantLock关系
+1.都是互斥锁
+2.内建锁是JVM层面实现的互斥锁，使用方式。。。现版本的Synchronized在性能上与Lock基本
+一直
+3.ReentranLock是java语言层面实现的互斥锁，使用方式
+4.对比：
+a.lock独有的：公平锁
+b，性能问题 JDK5之前
+C,等待队列的区别
+
+死锁：
+生产消费者模型
+线程池：
+   -线程池的继承关系（体系结构）
+     --Executor,ExecutorService,ThreadPool,Executors
+   -线程池的核心参数与工作流程
+     -corePoolSize
+	 -BlockingQueue
+	 -MaxiumPoolSize
+	 -RejectedHandler
+   -worker工作线程
+   -内置的四大线程池
+      -newFixedThreadPool(int size)
+	  -newSingleThreadPool()
+	  newCachedThreadPool()
+	  newScheduledThreadPool()
+JMM:
+   --工作内存与主内存
+   --happens-before原则
+   --原子，可见，有序
+   -volatile
+      -可见性
+	  -禁止指令重排
+	  --确保产生的对象完整性
+	  
+	  int x=2;
+	  volatile  boolean flag=false;---内存屏障
+	  instance = new Singleton();
+
+1.在堆上分配空间
+2.进行属性的初始化工作
+3.将内存地址赋值给instance引用
+
+	  
+	  
+	  
+
