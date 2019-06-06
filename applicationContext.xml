@@ -1,0 +1,66 @@
+<?xml  version="1.0"  encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--
+        多个处理器[适配器]和处理器[映射器]可以共存
+    -->
+
+    <!--config handler-->
+    <!--<bean id="handler1" name="/queryItem.action" class="com.ming.handler.ItemsHandler"/>-->
+
+    <!--<bean id="handler2" name="/queryItem2.action" class="com.ming.handler.ItemsHandler2"/>-->
+
+    <context:component-scan base-package="com.ming.handler"/>
+
+    <!--
+        Spring mvc 有默认的Mapping======在DispatcherServlet.properties
+        Spring mvc 有默认的Adaptor======在DispatcherServlet.properties
+    -->
+
+    <!--
+        用注解的方法来进行Adaptor和Mapping的设置
+    -->
+
+    <!--mvc:annotation driver相当于注解的mapping+Adator+others-->
+    <mvc:annotation-driven/>
+    <!--注解的Adaptor-->
+    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>
+    &lt;!&ndash;注解的Mapping&ndash;&gt;
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>-->
+
+
+   <!-- &lt;!&ndash;config handleradaptor&ndash;&gt;
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+    &lt;!&ndash;使用另外一个adaptor&ndash;&gt;
+    <bean class="org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter"/>-->
+
+
+
+   <!-- &lt;!&ndash;config handlermapping&ndash;&gt;
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/queryItem001.action">handler2</prop>
+                <prop key="/queryItem002.action">handler2</prop>
+                <prop key="/queryItem003.action">handler2</prop>
+
+                <prop key="/michaeljackson.action">handler1</prop>
+            </props>
+        </property>
+    </bean>-->
+
+
+
+    <!--config view resolver-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+
+    </bean>
+
+</beans>
